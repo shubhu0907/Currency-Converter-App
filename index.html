@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter- convert your currency</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,700;1,300&family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 900;
+            display: flex;
+            font-size: 25px;
+            background-color: rgb(164, 168, 216);
+            padding: 23px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            transition: all;
+            transition-duration: 500ms;
+
+        }
+
+        nav li a:hover {
+            text-decoration: none;
+            color: rgb(243, 21, 21);
+
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            display: flex;
+
+
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        div.logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin: 0 23px;
+        }
+
+        .container {
+            min-height: 89vh;
+            font-family: 'Poppins', sans-serif;
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .container h1,
+        h2 {
+            margin: 23px;
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container form label {
+            font-size: 25px;
+        }
+
+        .btn {
+            width: 144px;
+            padding: 5px 9px;
+            font-size: 20px;
+            background-color: azure;
+            border-radius: 13px;
+            cursor: pointer;
+        }
+
+        .container form input[type='number'],
+        select,
+        label {
+            font-size: 25px;
+            width: 13vw;
+            margin-bottom: 23px;
+            cursor: pointer;
+        }
+
+        .output{
+            display: none;
+        }
+
+        .output table {
+            width: 50vw;
+            text-align: cente r;
+            border: 2px solid black;
+            font-size: 20px;
+        }
+
+        footer {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">MyCurrencyConverter</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/About us">About us</a></li>
+            <li><a href="/Contact">Contact</a></li>
+        </ul>
+
+    </nav>
+    <div class="container">
+        <h1>Chosse a currency to convert</h1>
+        <form action="/action.php" method="get">
+            <label for="quantity">Chosse a quantity:</label>
+            <input type="number" name="quantity" min="1" max="10000">
+            <label for="Currency">Chosse a currency :</label>
+            <select name="currency">
+                <option value="USD">US doller</option>
+                <option value="INR">Indian rupees</option>
+                <option value="EUR">Europ</option>
+            </select>
+            <button class="btn" type="submit">Submit</button>
+
+        </form>
+        <div class="output">
+            <h2>Here is your converted value in diffferent currency </h2>
+            <table>
+
+
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Currency Code</th>
+                        <th>Value</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        Copyright &copy; All right reserv
+    </footer>
+    <script>
+
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
